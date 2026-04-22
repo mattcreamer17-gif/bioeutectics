@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A read on where orchestration fits in Bioeutectics' stack</title>
+  <meta name="description" content="Saw the Syensqo round and the Tulsa office standing up. Three U.S. patents on NADES formulations plus a fourth on the screening platform. Bet the regulatory-filing pile is growing faster than the team." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand-mark" href="https://www.bioeutectics.com/" target="_blank" rel="noopener" aria-label="Bioeutectics">
+        <img src="logo.png" alt="Bioeutectics" />
+      </a>
+      <span class="meta-label">Prepared for Tomás &amp; team · eMerge 2026</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <p class="hero-eyebrow">01 / A working hypothesis</p>
+        <h1 id="hero-heading">A read on where <span class="accent">orchestration</span> fits in Bioeutectics' stack.</h1>
+        <p class="hero-lede">
+          You are building natural eutectic systems at industrial scale. The science is 30+ SKUs deep, patents are filed, Syensqo wrote the check, and the applications lab in Tulsa is coming online. The next constraint is not chemistry.
+        </p>
+
+        <dl class="hero-meta">
+          <div>
+            <dt>Prepared for</dt>
+            <dd>Tomás Silicaro, CEO</dd>
+          </div>
+          <div>
+            <dt>From</dt>
+            <dd>Matt Creamer, CRO · Eduba</dd>
+          </div>
+          <div>
+            <dt>Context</dt>
+            <dd>Booth SS79 · eMerge Americas Miami 2026</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CONSTRAINT -->
+    <section class="constraint" aria-labelledby="constraint-heading">
+      <div class="container">
+        <span class="section-number">02 / The next constraint</span>
+        <h2 id="constraint-heading">It is paperwork.</h2>
+        <p>
+          REACH dossiers. FDA ingredient filings. Customer-specific technical data sheets. Toxicology packages that need to be restated for every jurisdiction a customer sells into. Each new partner opens a documentation queue, and every document pulls a chemist or a founder out of the lab for a day.
+        </p>
+        <p class="pull">
+          "Nature designs chemistry through systems, not isolated molecules." The same applies to the paperwork around the molecule.
+        </p>
+      </div>
+    </section>
+
+    <!-- THINKING -->
+    <section class="thinking" aria-labelledby="thinking-heading">
+      <div class="container">
+        <span class="section-number">03 / How we'd think about it</span>
+        <h2 id="thinking-heading">Most organizations automate the wrong layer.</h2>
+        <p class="thinking-note">
+          Teams reach for a large language model when a template plus a database would ship the answer faster, cheaper, and with guarantees a regulator will actually accept. The work is about deciding which part of the dossier belongs on which layer.
+        </p>
+
+        <div class="thinking-grid" role="list">
+          <article class="layer" role="listitem">
+            <span class="tag">Rules</span>
+            <h3>EU REACH format, section ordering, required fields.</h3>
+            <p>Deterministic. Versioned. Auditable. A rules engine produces the same artifact the same way every time.</p>
+            <p class="verdict">Should never touch an LLM.</p>
+          </article>
+
+          <article class="layer" role="listitem">
+            <span class="tag">Structured data</span>
+            <h3>Composition, CAS numbers, toxicity values from your own lab.</h3>
+            <p>Lives in a database. Queried. Composed into the template. Traceable back to the batch it came from.</p>
+            <p class="verdict">Should never touch an LLM.</p>
+          </article>
+
+          <article class="layer ai" role="listitem">
+            <span class="tag">Generative</span>
+            <h3>Interpretation, argumentation, novel-use justification.</h3>
+            <p>The narrow band where a reviewed LLM output earns its place. Heavy human sign-off, tight context, receipts on every claim.</p>
+            <p class="verdict">Should touch an LLM, with discipline.</p>
+          </article>
+        </div>
+
+        <p class="thinking-note" style="margin-top:48px">
+          Your AI screening platform is already doing the hard version of this <strong>inside the lab</strong>. The question is whether the same discipline applies to the regulatory and commercial motion outside the lab.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRECEDENT -->
+    <section class="precedent" aria-labelledby="precedent-heading">
+      <div class="container">
+        <span class="section-number">04 / Precedent</span>
+        <h2 id="precedent-heading">Same problem shape. Different industry.</h2>
+
+        <div class="precedent-wrap">
+          <aside class="precedent-card">
+            <p class="kicker">Compliance platform · Central Africa</p>
+            <p class="stat">160<span class="stat-unit">hours / report</span></p>
+            <span class="arrow" aria-hidden="true">↓</span>
+            <p class="stat">&lt; 5<span class="stat-unit">minutes</span></p>
+            <p style="margin-top:20px">
+              Document-heavy, jurisdiction-specific, fatal if wrong. The orchestration redesign collapsed the cycle by routing rules, data, and narrative onto the right layer.
+            </p>
+          </aside>
+
+          <div class="precedent-copy">
+            <p>
+              The methodology behind it is published. Interpretable Context Methodology (ICM) frames agent context as a layered filesystem: identity at the top, working artifacts at the bottom, with measurable interpretability and reproducibility gains between them. Submitted to ACM TiiS.
+            </p>
+            <p>
+              Regulatory dossiers are a layered-folder problem in disguise. Per-SKU, per-jurisdiction, per-customer, per-batch. The structure is already there. The work is making it legible to an agent that can assemble the output.
+            </p>
+
+            <div class="paper-card">
+              <p class="label">The paper</p>
+              <h3>Interpretable Context Methodology: Folder Structure as Agent Architecture.</h3>
+              <p>Free to read. MIT license on the reference implementation.</p>
+              <div class="paper-links">
+                <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">GitHub repository</a>
+                <a href="https://www.bioeutectics.com/technology" target="_blank" rel="noopener">Bioeutectics / Technology</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container cta-inner">
+        <span class="section-number">05 / The ask</span>
+        <h2 id="cta-heading">30 minutes with Matt.</h2>
+        <p>
+          Bring one recent dossier or customer-RFI cycle that ate more time than it should have. We will walk back through it and tell you honestly whether this is a real orchestration problem or whether you should wait a year. If it is out of our scope, Eduba partners with NLP Logix for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists.
+        </p>
+
+        <a class="cta-button" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+          <span class="dot" aria-hidden="true"></span>
+          Book the 30 minutes with Matt
+          <span class="arrow-ico" aria-hidden="true">→</span>
+        </a>
+
+        <p class="cta-meta">
+          <strong>Matt Creamer</strong>, CRO at Eduba. Enterprise outreach, Tier 1 CPG and specialty-chemicals conversations. Booth SS79 through the end of the event, then by calendar.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="prepared-by">
+        Prepared by Eduba, <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a>
+      </span>
+      <span>Bioeutectics is a Bioeutectics Corp. / Bioeutectics S.A. trademark. Content on this page is a private read-out, not an offer of services.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
